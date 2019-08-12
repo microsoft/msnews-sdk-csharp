@@ -5,7 +5,7 @@ Integrate the Microsoft News API into your .NET project!
 Your feedback is important to us.
 
 - To let us know about any questions or issues you find in the documentation, [submit an issue](https://github.com/microsoft/msnews-sdk-csharp/issues) in this repository.
-- We also encourage you to fork, make the fix, and do a pull request of your proposed changes. See [Contributing](##Contributing) section for contributing guidelines.
+- We also encourage you to fork, make the fix, and do a pull request of your proposed changes. See [Contributing](#Contributing) section for contributing guidelines.
 
 ## Quick Start
 ### 1. Clone project 

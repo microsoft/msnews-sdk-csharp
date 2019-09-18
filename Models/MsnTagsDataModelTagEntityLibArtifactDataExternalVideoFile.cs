@@ -28,11 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile class.
         /// </summary>
-        /// <param name="url">Gets or sets Url</param>
-        /// <param name="width">Gets or sets the width.</param>
-        /// <param name="height">Gets or sets the height.</param>
-        /// <param name="contentType">Gets or sets the content type.</param>
-        /// <param name="fileSize">Gets or sets the file size.</param>
         public MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile(string url = default(string), int? width = default(int?), int? height = default(int?), string contentType = default(string), int? fileSize = default(int?))
         {
             Url = url;
@@ -49,31 +44,26 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Url
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets the width.
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets the height.
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets the content type.
         /// </summary>
         [JsonProperty(PropertyName = "contentType")]
         public string ContentType { get; set; }
 
         /// <summary>
-        /// Gets or sets the file size.
         /// </summary>
         [JsonProperty(PropertyName = "fileSize")]
         public int? FileSize { get; set; }

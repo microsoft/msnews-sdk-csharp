@@ -28,13 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataImage class.
         /// </summary>
-        /// <param name="width">Gets or sets Width</param>
-        /// <param name="height">Gets or sets Height</param>
-        /// <param name="quality">Gets or sets Quality</param>
-        /// <param name="url">Gets or sets Url</param>
-        /// <param name="attribution">Gets or sets Attribution</param>
-        /// <param name="title">Gets or sets Title</param>
-        /// <param name="source">Gets or sets the source.</param>
         public MsnTagsDataModelTagEntityLibArtifactDataImage(int? width = default(int?), int? height = default(int?), int? quality = default(int?), string url = default(string), string attribution = default(string), string title = default(string), MsnTagsDataModelTagEntityLibArtifactDataFocalRegion focalRegion = default(MsnTagsDataModelTagEntityLibArtifactDataFocalRegion), string source = default(string))
         {
             Width = width;
@@ -54,37 +47,31 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Width
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets Quality
         /// </summary>
         [JsonProperty(PropertyName = "quality")]
         public int? Quality { get; set; }
 
         /// <summary>
-        /// Gets or sets Url
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets Attribution
         /// </summary>
         [JsonProperty(PropertyName = "attribution")]
         public string Attribution { get; set; }
 
         /// <summary>
-        /// Gets or sets Title
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
@@ -95,7 +82,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MsnTagsDataModelTagEntityLibArtifactDataFocalRegion FocalRegion { get; set; }
 
         /// <summary>
-        /// Gets or sets the source.
         /// </summary>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }

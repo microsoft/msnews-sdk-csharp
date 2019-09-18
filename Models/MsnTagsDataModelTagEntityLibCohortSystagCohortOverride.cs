@@ -30,12 +30,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibCohortSystagCohortOverride class.
         /// </summary>
-        /// <param name="editorsPickListCmsIds">Gets or sets a list of editor
-        /// curated Ids</param>
-        /// <param name="topOnEditorsPickList">Gets or sets first x
-        /// items</param>
-        /// <param name="artifactPicks">Gets or sets the artifact picks, name
-        /// to system collection id mapping</param>
         public MsnTagsDataModelTagEntityLibCohortSystagCohortOverride(IList<string> editorsPickListCmsIds = default(IList<string>), long? topOnEditorsPickList = default(long?), IDictionary<string, string> artifactPicks = default(IDictionary<string, string>))
         {
             EditorsPickListCmsIds = editorsPickListCmsIds;
@@ -50,20 +44,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets a list of editor curated Ids
         /// </summary>
         [JsonProperty(PropertyName = "editorsPickListCmsIds")]
         public IList<string> EditorsPickListCmsIds { get; set; }
 
         /// <summary>
-        /// Gets or sets first x items
         /// </summary>
         [JsonProperty(PropertyName = "topOnEditorsPickList")]
         public long? TopOnEditorsPickList { get; set; }
 
         /// <summary>
-        /// Gets or sets the artifact picks, name to system collection id
-        /// mapping
         /// </summary>
         [JsonProperty(PropertyName = "artifactPicks")]
         public IDictionary<string, string> ArtifactPicks { get; set; }

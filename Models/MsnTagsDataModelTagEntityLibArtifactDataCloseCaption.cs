@@ -28,8 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataCloseCaption class.
         /// </summary>
-        /// <param name="locale">Gets or sets the locale.</param>
-        /// <param name="href">Gets or sets the HREF.</param>
         public MsnTagsDataModelTagEntityLibArtifactDataCloseCaption(string locale = default(string), string href = default(string))
         {
             Locale = locale;
@@ -43,13 +41,11 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the locale.
         /// </summary>
         [JsonProperty(PropertyName = "locale")]
         public string Locale { get; set; }
 
         /// <summary>
-        /// Gets or sets the HREF.
         /// </summary>
         [JsonProperty(PropertyName = "href")]
         public string Href { get; set; }

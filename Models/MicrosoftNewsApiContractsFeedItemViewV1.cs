@@ -30,37 +30,7 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MicrosoftNewsApiContractsFeedItemViewV1 class.
         /// </summary>
-        /// <param name="id">The unique identifier for this Feed Item</param>
-        /// <param name="type">The feed item type. This may be an article,
-        /// video, or slideshow</param>
-        /// <param name="section">An semantic section name of the Feed Item, it
-        /// can be used as hint of UI configuration
-        /// It should be assigned with value when the Feed Item is not a leaf
-        /// node.</param>
-        /// <param name="nextPageUrl">This provides the Next Page URL for calls
-        /// that need pagination.</param>
-        /// <param name="title">The item title</param>
-        /// <param name="subTitle">The item subtitle</param>
-        /// <param name="abstractProperty">The item abstract</param>
-        /// <param name="url">The URL to the content view page</param>
-        /// <param name="locale">The Locale that the content is presented
-        /// in</param>
-        /// <param name="topics">The list of Topics that this content is
-        /// associated with along with the Feed name and ID for each.</param>
-        /// <param name="galleryItemCount">The number of items in the slideshow
-        /// gallery. This property is only defined for Slideshow feed
-        /// items.</param>
-        /// <param name="externalVideoFiles">The list of extenal video files.
-        /// This property is defined for Video feed items.</param>
-        /// <param name="images">The list of Images available for the feed item
-        /// headline</param>
-        /// <param name="category">The primary category that this content is
-        /// classified into</param>
-        /// <param name="publishedDateTime">The date and time when the content
-        /// was published by the source provider.</param>
-        /// <param name="subCards">The collection of nested items related to
-        /// this Feed Item.</param>
-        public MicrosoftNewsApiContractsFeedItemViewV1(string id = default(string), string type = default(string), string section = default(string), string nextPageUrl = default(string), string title = default(string), string subTitle = default(string), string abstractProperty = default(string), string url = default(string), string locale = default(string), IList<MsnTagsDataModelTagEntityLibArtifactDataTag> topics = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTag>), int? galleryItemCount = default(int?), MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata videoMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata), IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> externalVideoFiles = default(IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile>), IList<MsnTagsDataModelTagEntityLibArtifactDataImage> images = default(IList<MsnTagsDataModelTagEntityLibArtifactDataImage>), MicrosoftNewsApiContractsProviderSummaryView provider = default(MicrosoftNewsApiContractsProviderSummaryView), string category = default(string), string publishedDateTime = default(string), MicrosoftNewsApiContractsSourceFeedView feed = default(MicrosoftNewsApiContractsSourceFeedView), IList<MicrosoftNewsApiContractsFeedItemViewV1> subCards = default(IList<MicrosoftNewsApiContractsFeedItemViewV1>))
+        public MicrosoftNewsApiContractsFeedItemViewV1(string id = default(string), string type = default(string), string section = default(string), string nextPageUrl = default(string), string title = default(string), string subTitle = default(string), string abstractProperty = default(string), string url = default(string), string locale = default(string), IList<MsnTagsDataModelTagEntityLibArtifactDataTag> topics = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTag>), int? galleryItemCount = default(int?), MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata videoMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata), MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata audioMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata), IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> externalVideoFiles = default(IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile>), IList<MsnTagsDataModelTagEntityLibArtifactDataImage> images = default(IList<MsnTagsDataModelTagEntityLibArtifactDataImage>), MicrosoftNewsApiContractsProviderSummaryView provider = default(MicrosoftNewsApiContractsProviderSummaryView), string category = default(string), string publishedDateTime = default(string), MicrosoftNewsApiContractsSourceFeedView feed = default(MicrosoftNewsApiContractsSourceFeedView), IList<MicrosoftNewsApiContractsFeedItemViewV1> subCards = default(IList<MicrosoftNewsApiContractsFeedItemViewV1>))
         {
             Id = id;
             Type = type;
@@ -74,6 +44,7 @@ namespace MicrosoftNewsAPI.SDK.Models
             Topics = topics;
             GalleryItemCount = galleryItemCount;
             VideoMetadata = videoMetadata;
+            AudioMetadata = audioMetadata;
             ExternalVideoFiles = externalVideoFiles;
             Images = images;
             Provider = provider;
@@ -90,74 +61,56 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the unique identifier for this Feed Item
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the feed item type. This may be an article, video, or
-        /// slideshow
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets an semantic section name of the Feed Item, it can be
-        /// used as hint of UI configuration
-        /// It should be assigned with value when the Feed Item is not a leaf
-        /// node.
         /// </summary>
         [JsonProperty(PropertyName = "section")]
         public string Section { get; set; }
 
         /// <summary>
-        /// Gets or sets this provides the Next Page URL for calls that need
-        /// pagination.
         /// </summary>
         [JsonProperty(PropertyName = "nextPageUrl")]
         public string NextPageUrl { get; set; }
 
         /// <summary>
-        /// Gets or sets the item title
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the item subtitle
         /// </summary>
         [JsonProperty(PropertyName = "subTitle")]
         public string SubTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets the item abstract
         /// </summary>
         [JsonProperty(PropertyName = "abstract")]
         public string AbstractProperty { get; set; }
 
         /// <summary>
-        /// Gets or sets the URL to the content view page
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets the Locale that the content is presented in
         /// </summary>
         [JsonProperty(PropertyName = "locale")]
         public string Locale { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of Topics that this content is associated
-        /// with along with the Feed name and ID for each.
         /// </summary>
         [JsonProperty(PropertyName = "topics")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataTag> Topics { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of items in the slideshow gallery. This
-        /// property is only defined for Slideshow feed items.
         /// </summary>
         [JsonProperty(PropertyName = "galleryItemCount")]
         public int? GalleryItemCount { get; set; }
@@ -168,15 +121,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata VideoMetadata { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of extenal video files. This property is
-        /// defined for Video feed items.
+        /// </summary>
+        [JsonProperty(PropertyName = "audioMetadata")]
+        public MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata AudioMetadata { get; set; }
+
+        /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "externalVideoFiles")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> ExternalVideoFiles { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of Images available for the feed item
-        /// headline
         /// </summary>
         [JsonProperty(PropertyName = "images")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataImage> Images { get; set; }
@@ -187,15 +141,11 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MicrosoftNewsApiContractsProviderSummaryView Provider { get; set; }
 
         /// <summary>
-        /// Gets or sets the primary category that this content is classified
-        /// into
         /// </summary>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time when the content was published by
-        /// the source provider.
         /// </summary>
         [JsonProperty(PropertyName = "publishedDateTime")]
         public string PublishedDateTime { get; set; }
@@ -206,8 +156,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MicrosoftNewsApiContractsSourceFeedView Feed { get; set; }
 
         /// <summary>
-        /// Gets or sets the collection of nested items related to this Feed
-        /// Item.
         /// </summary>
         [JsonProperty(PropertyName = "subCards")]
         public IList<MicrosoftNewsApiContractsFeedItemViewV1> SubCards { get; set; }

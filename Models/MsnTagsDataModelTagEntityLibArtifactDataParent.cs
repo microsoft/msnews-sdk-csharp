@@ -28,9 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataParent class.
         /// </summary>
-        /// <param name="name">Gets or sets Name</param>
-        /// <param name="id">Gets or sets Id</param>
-        /// <param name="type">Gets or sets Type</param>
         public MsnTagsDataModelTagEntityLibArtifactDataParent(string name = default(string), string id = default(string), string type = default(string))
         {
             Name = name;
@@ -45,19 +42,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Name
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Id
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets Type
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }

@@ -2,11 +2,35 @@
 // Licensed under the MIT License. See License.txt in the project root for
 // license information.
 
+using System.Collections.Generic;
 using System.Net.Http;
+using Microsoft.Rest.Serialization;
 using MicrosoftNewsAPI.SDK.Models;
+using Newtonsoft.Json;
 
 namespace MicrosoftNewsAPI.SDK
 {
+    public partial class MicrosoftNewsAPI
+    {
+        partial void CustomInitialize() {
+            // Overwrite Deserialization settings. 
+            DeserializationSettings = new JsonSerializerSettings
+            {
+                DateFormatHandling = Newtonsoft.Json.DateFormatHandling.IsoDateFormat,
+                DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.Utc,
+                NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
+                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Serialize,
+                ContractResolver = new ReadOnlyJsonContractResolver(),
+                TypeNameHandling = TypeNameHandling.Auto,                    
+                TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Full,
+                Converters = new List<JsonConverter>
+                {
+                    new Iso8601TimeSpanConverter()
+                }
+            };
+        }
+    }
+
     public class MicrosoftNewsClient : MicrosoftNewsAPI
     {
 
@@ -130,36 +154,6 @@ namespace MicrosoftNewsAPI.SDK
 
         
         /// <summary>
-        /// Get available interests.
-        /// </summary>
-        /// <param name='market'>
-        /// The market.
-        /// </param>
-        /// <param name='user'>
-        /// The user ID of who is making the request, needs to be authenticated.
-        /// </param>
-        /// <param name='activityId'>
-        /// Use this parameter for if you need to relate your request activities with Microsoft News API performance monitoring
-        /// </param>
-        /// <param name='top'>
-        /// Total number of documents required - (default is 10)
-        /// </param>
-        /// <param name='select'>
-        /// Comma separated fields, for attribute projection purpose
-        /// </param>
-        /// <param name='ids'>
-        /// Get related entities via their ids.
-        /// </param>
-        /// <param name='skip'>
-        /// Number of documents to be skipped from the top.
-        /// </param>
-        public MicrosoftNewsClientODataResponseMsnTagsDataModelTagEntityLibCompositeCard GetNewsTopics(string market = default(string), string user = default(string), string activityId = default(string), int? top = default(int?), string select = default(string), string ids = default(string), int? skip = default(int?))
-        {
-            return MicrosoftNewsAPIExtensions.GetNewsTopics(this, this.apikey, this.ocid, market, user, activityId, top, select, ids, skip) as MicrosoftNewsClientODataResponseMsnTagsDataModelTagEntityLibCompositeCard;
-        }
-        
-            
-        /// <summary>
         /// The Feed API is a one stop shop for getting content for any category (ie. autos, sports), search term (ie. Microsoft), or theme (trending feed, related feed).
         /// </summary>
         /// <param name='query'>
@@ -222,6 +216,36 @@ namespace MicrosoftNewsAPI.SDK
         public MicrosoftNewsClientODataResponseMsnTagsDataModelTagEntityLibMarket GetNewsMarkets(string filter = default(string), string activityId = default(string), int? top = default(int?), string select = default(string), string ids = default(string), int? skip = default(int?))
         {
             return MicrosoftNewsAPIExtensions.GetNewsMarkets(this, this.apikey, this.ocid, filter, activityId, top, select, ids, skip) as MicrosoftNewsClientODataResponseMsnTagsDataModelTagEntityLibMarket;
+        }
+        
+            
+        /// <summary>
+        /// Get available interests.
+        /// </summary>
+        /// <param name='market'>
+        /// The market.
+        /// </param>
+        /// <param name='user'>
+        /// The user ID of who is making the request, needs to be authenticated.
+        /// </param>
+        /// <param name='activityId'>
+        /// Use this parameter for if you need to relate your request activities with Microsoft News API performance monitoring
+        /// </param>
+        /// <param name='top'>
+        /// Total number of documents required - (default is 10)
+        /// </param>
+        /// <param name='select'>
+        /// Comma separated fields, for attribute projection purpose
+        /// </param>
+        /// <param name='ids'>
+        /// Get related entities via their ids.
+        /// </param>
+        /// <param name='skip'>
+        /// Number of documents to be skipped from the top.
+        /// </param>
+        public MicrosoftNewsClientODataResponseMsnTagsDataModelTagEntityLibCompositeCard GetNewsTopics(string market = default(string), string user = default(string), string activityId = default(string), int? top = default(int?), string select = default(string), string ids = default(string), int? skip = default(int?))
+        {
+            return MicrosoftNewsAPIExtensions.GetNewsTopics(this, this.apikey, this.ocid, market, user, activityId, top, select, ids, skip) as MicrosoftNewsClientODataResponseMsnTagsDataModelTagEntityLibCompositeCard;
         }
         
             

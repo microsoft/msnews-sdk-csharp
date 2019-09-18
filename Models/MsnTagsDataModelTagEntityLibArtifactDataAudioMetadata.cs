@@ -28,10 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata class.
         /// </summary>
-        /// <param name="playTime">Gets or sets the play time.</param>
-        /// <param name="attribution">Gets or sets the audio
-        /// attribution.</param>
-        /// <param name="copyright">Gets or sets the copyright.</param>
         public MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata(int? playTime = default(int?), string attribution = default(string), string copyright = default(string))
         {
             PlayTime = playTime;
@@ -46,19 +42,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the play time.
         /// </summary>
         [JsonProperty(PropertyName = "playTime")]
         public int? PlayTime { get; set; }
 
         /// <summary>
-        /// Gets or sets the audio attribution.
         /// </summary>
         [JsonProperty(PropertyName = "attribution")]
         public string Attribution { get; set; }
 
         /// <summary>
-        /// Gets or sets the copyright.
         /// </summary>
         [JsonProperty(PropertyName = "copyright")]
         public string Copyright { get; set; }

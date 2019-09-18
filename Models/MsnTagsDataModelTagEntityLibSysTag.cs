@@ -30,74 +30,7 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibSysTag class.
         /// </summary>
-        /// <param name="sourceType">Get or set the SourceType of the
-        /// SysTag</param>
-        /// <param name="isEnabled">Get or set the IsEnabled</param>
-        /// <param name="feedStreamCmsId">Get or set CMS feed stream id</param>
-        /// <param name="labels">Get or set labels in CMS</param>
-        /// <param name="editorsPickListCmsIds">Get or set a list of editor
-        /// curated Ids</param>
-        /// <param name="cmsODataQuerys">Get or set a list of cms Odata
-        /// querys</param>
-        /// <param name="topOnEditorsPickList">Get or set first x items</param>
-        /// <param name="artifactPicks">Get or set the artifact picks, name to
-        /// system collection id mapping</param>
-        /// <param name="synonyms">Get or set the list of synonyms</param>
-        /// <param name="relatedFeedIds">Get or set the list of feed
-        /// Ids</param>
-        /// <param name="isEditorCurationEnabled">Get or set CMS field
-        /// IsEditorCurationEnabled</param>
-        /// <param name="isAutoCurationEnabled">Get or set CMS field
-        /// IsEditorCurationEnabled</param>
-        /// <param name="isBingBackfillEnabled">Get or set CMS field
-        /// IsBingBackfillEnabled</param>
-        /// <param name="isMsnBackfillEnabled">Get or set CMS field
-        /// IsMsnBackfillEnabled</param>
-        /// <param name="isCmsODataQueryEnabled">Get or set CMS field
-        /// IsCmsODataQueryEnabled</param>
-        /// <param name="isSuggestionEnabled">Determines whether this systag is
-        /// to be shown in Suggestions
-        /// If false, will not be shown. Otherwise it will</param>
-        /// <param name="isLocation">Determines whether this systag is a
-        /// location</param>
-        /// <param name="sourceIndex">Get or set the index in the
-        /// source</param>
-        /// <param name="startRound">Get or set start round</param>
-        /// <param name="endRound">Get or set end round</param>
-        /// <param name="takePerRound">Get or set take per round</param>
-        /// <param name="isTopStory">Get or set the flag of is topstory</param>
-        /// <param name="cmsSourceIds">Get or set the CMS source ids.</param>
-        /// <param name="locations">Gets or sets the location.</param>
-        /// <param name="popularity">Get or set popularity score for
-        /// systag</param>
-        /// <param name="originalSource">Gets or sets the original
-        /// source.</param>
-        /// <param name="cohortOverride">Gets or sets the cohort
-        /// override.</param>
-        /// <param name="lowercaseName">Get or set the lower case name</param>
-        /// <param name="feedType">Get or set the feed type (systag or
-        /// usertag)</param>
-        /// <param name="name">Get or set the Name</param>
-        /// <param name="ownerId">Get or set the OwnerId of the action</param>
-        /// <param name="itemCount">Get or set the count of items that are
-        /// included</param>
-        /// <param name="type">Get or set the Type of the Card.
-        /// Please use ContentTypes for this property although we don't use a
-        /// strong name for easier backward compatibilty for future
-        /// extension.</param>
-        /// <param name="url">Get or set the Clickable Url of the Card</param>
-        /// <param name="locale">Gets or sets Locale of the Card (optional) for
-        /// extra information purpose.</param>
-        /// <param name="adaptiveCard">Gets or sets AdaptiveCard of the Card
-        /// (optional) for adaptive card rendering purpose.</param>
-        /// <param name="createdDateTime">Get or set the CreateDate of the
-        /// entity</param>
-        /// <param name="updatedDateTime">Get or set the ModifiedDate of the
-        /// entity</param>
-        /// <param name="deleted">Get or set whether the entity is
-        /// Deleted</param>
-        /// <param name="_et">Get or set the extended type</param>
-        public MsnTagsDataModelTagEntityLibSysTag(string sourceType = default(string), bool? isEnabled = default(bool?), string feedStreamCmsId = default(string), IList<string> labels = default(IList<string>), IList<string> editorsPickListCmsIds = default(IList<string>), IList<string> cmsODataQuerys = default(IList<string>), long? topOnEditorsPickList = default(long?), IDictionary<string, string> artifactPicks = default(IDictionary<string, string>), IList<string> synonyms = default(IList<string>), IList<string> relatedFeedIds = default(IList<string>), bool? isEditorCurationEnabled = default(bool?), bool? isAutoCurationEnabled = default(bool?), bool? isBingBackfillEnabled = default(bool?), bool? isMsnBackfillEnabled = default(bool?), bool? isCmsODataQueryEnabled = default(bool?), bool? isSuggestionEnabled = default(bool?), bool? isLocation = default(bool?), MsnTagsDataModelTagEntityLibArtifactDataImage image = default(MsnTagsDataModelTagEntityLibArtifactDataImage), int? sourceIndex = default(int?), int? startRound = default(int?), int? endRound = default(int?), int? takePerRound = default(int?), bool? isTopStory = default(bool?), IList<string> cmsSourceIds = default(IList<string>), MsnTagsDataModelTagEntityLibLocation location = default(MsnTagsDataModelTagEntityLibLocation), IList<MsnTagsDataModelTagEntityLibLocation> locations = default(IList<MsnTagsDataModelTagEntityLibLocation>), int? popularity = default(int?), string originalSource = default(string), IDictionary<string, MsnTagsDataModelTagEntityLibCohortSystagCohortOverride> cohortOverride = default(IDictionary<string, MsnTagsDataModelTagEntityLibCohortSystagCohortOverride>), string lowercaseName = default(string), string feedType = default(string), string name = default(string), string ownerId = default(string), long? itemCount = default(long?), string type = default(string), string url = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
+        public MsnTagsDataModelTagEntityLibSysTag(string sourceType = default(string), bool? isEnabled = default(bool?), string feedStreamCmsId = default(string), IList<string> labels = default(IList<string>), IList<string> editorsPickListCmsIds = default(IList<string>), IList<string> cmsODataQuerys = default(IList<string>), long? topOnEditorsPickList = default(long?), IDictionary<string, string> artifactPicks = default(IDictionary<string, string>), IList<string> synonyms = default(IList<string>), IList<string> relatedFeedIds = default(IList<string>), bool? isEditorCurationEnabled = default(bool?), bool? isAutoCurationEnabled = default(bool?), bool? isBingBackfillEnabled = default(bool?), bool? isMsnBackfillEnabled = default(bool?), bool? isCmsODataQueryEnabled = default(bool?), bool? isSuggestionEnabled = default(bool?), bool? isLocation = default(bool?), MsnTagsDataModelTagEntityLibArtifactDataImage image = default(MsnTagsDataModelTagEntityLibArtifactDataImage), int? sourceIndex = default(int?), int? startRound = default(int?), int? endRound = default(int?), int? takePerRound = default(int?), bool? isTopStory = default(bool?), IList<string> cmsSourceIds = default(IList<string>), MsnTagsDataModelTagEntityLibLocation location = default(MsnTagsDataModelTagEntityLibLocation), IList<MsnTagsDataModelTagEntityLibLocation> locations = default(IList<MsnTagsDataModelTagEntityLibLocation>), int? popularity = default(int?), string originalSource = default(string), IDictionary<string, MsnTagsDataModelTagEntityLibCohortSystagCohortOverride> cohortOverride = default(IDictionary<string, MsnTagsDataModelTagEntityLibCohortSystagCohortOverride>), string canonicalName = default(string), string lowercaseName = default(string), string feedType = default(string), string name = default(string), string ownerId = default(string), long? itemCount = default(long?), string type = default(string), string url = default(string), string sourceHref = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
         {
             SourceType = sourceType;
             IsEnabled = isEnabled;
@@ -128,6 +61,7 @@ namespace MicrosoftNewsAPI.SDK.Models
             Popularity = popularity;
             OriginalSource = originalSource;
             CohortOverride = cohortOverride;
+            CanonicalName = canonicalName;
             LowercaseName = lowercaseName;
             FeedType = feedType;
             Name = name;
@@ -135,6 +69,7 @@ namespace MicrosoftNewsAPI.SDK.Models
             ItemCount = itemCount;
             Type = type;
             Url = url;
+            SourceHref = sourceHref;
             Locale = locale;
             AdaptiveCard = adaptiveCard;
             CreatedDateTime = createdDateTime;
@@ -152,106 +87,86 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets get or set the SourceType of the SysTag
         /// </summary>
         [JsonProperty(PropertyName = "sourceType")]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the IsEnabled
         /// </summary>
         [JsonProperty(PropertyName = "isEnabled")]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set CMS feed stream id
         /// </summary>
         [JsonProperty(PropertyName = "feedStreamCmsId")]
         public string FeedStreamCmsId { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set labels in CMS
         /// </summary>
         [JsonProperty(PropertyName = "labels")]
         public IList<string> Labels { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set a list of editor curated Ids
         /// </summary>
         [JsonProperty(PropertyName = "editorsPickListCmsIds")]
         public IList<string> EditorsPickListCmsIds { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set a list of cms Odata querys
         /// </summary>
         [JsonProperty(PropertyName = "cmsODataQuerys")]
         public IList<string> CmsODataQuerys { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set first x items
         /// </summary>
         [JsonProperty(PropertyName = "topOnEditorsPickList")]
         public long? TopOnEditorsPickList { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the artifact picks, name to system
-        /// collection id mapping
         /// </summary>
         [JsonProperty(PropertyName = "artifactPicks")]
         public IDictionary<string, string> ArtifactPicks { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the list of synonyms
         /// </summary>
         [JsonProperty(PropertyName = "synonyms")]
         public IList<string> Synonyms { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the list of feed Ids
         /// </summary>
         [JsonProperty(PropertyName = "relatedFeedIds")]
         public IList<string> RelatedFeedIds { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set CMS field IsEditorCurationEnabled
         /// </summary>
         [JsonProperty(PropertyName = "isEditorCurationEnabled")]
         public bool? IsEditorCurationEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set CMS field IsEditorCurationEnabled
         /// </summary>
         [JsonProperty(PropertyName = "isAutoCurationEnabled")]
         public bool? IsAutoCurationEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set CMS field IsBingBackfillEnabled
         /// </summary>
         [JsonProperty(PropertyName = "isBingBackfillEnabled")]
         public bool? IsBingBackfillEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set CMS field IsMsnBackfillEnabled
         /// </summary>
         [JsonProperty(PropertyName = "isMsnBackfillEnabled")]
         public bool? IsMsnBackfillEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set CMS field IsCmsODataQueryEnabled
         /// </summary>
         [JsonProperty(PropertyName = "isCmsODataQueryEnabled")]
         public bool? IsCmsODataQueryEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets determines whether this systag is to be shown in
-        /// Suggestions
-        /// If false, will not be shown. Otherwise it will
         /// </summary>
         [JsonProperty(PropertyName = "isSuggestionEnabled")]
         public bool? IsSuggestionEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets determines whether this systag is a location
         /// </summary>
         [JsonProperty(PropertyName = "isLocation")]
         public bool? IsLocation { get; set; }
@@ -262,37 +177,31 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MsnTagsDataModelTagEntityLibArtifactDataImage Image { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the index in the source
         /// </summary>
         [JsonProperty(PropertyName = "sourceIndex")]
         public int? SourceIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set start round
         /// </summary>
         [JsonProperty(PropertyName = "startRound")]
         public int? StartRound { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set end round
         /// </summary>
         [JsonProperty(PropertyName = "endRound")]
         public int? EndRound { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set take per round
         /// </summary>
         [JsonProperty(PropertyName = "takePerRound")]
         public int? TakePerRound { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the flag of is topstory
         /// </summary>
         [JsonProperty(PropertyName = "isTopStory")]
         public bool? IsTopStory { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the CMS source ids.
         /// </summary>
         [JsonProperty(PropertyName = "cmsSourceIds")]
         public IList<string> CmsSourceIds { get; set; }
@@ -303,107 +212,96 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MsnTagsDataModelTagEntityLibLocation Location { get; set; }
 
         /// <summary>
-        /// Gets or sets the location.
         /// </summary>
         [JsonProperty(PropertyName = "locations")]
         public IList<MsnTagsDataModelTagEntityLibLocation> Locations { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set popularity score for systag
         /// </summary>
         [JsonProperty(PropertyName = "popularity")]
         public int? Popularity { get; set; }
 
         /// <summary>
-        /// Gets or sets the original source.
         /// </summary>
         [JsonProperty(PropertyName = "originalSource")]
         public string OriginalSource { get; set; }
 
         /// <summary>
-        /// Gets or sets the cohort override.
         /// </summary>
         [JsonProperty(PropertyName = "cohortOverride")]
         public IDictionary<string, MsnTagsDataModelTagEntityLibCohortSystagCohortOverride> CohortOverride { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the lower case name
+        /// </summary>
+        [JsonProperty(PropertyName = "canonicalName")]
+        public string CanonicalName { get; set; }
+
+        /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "lowercaseName")]
         public string LowercaseName { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the feed type (systag or usertag)
         /// </summary>
         [JsonProperty(PropertyName = "feedType")]
         public string FeedType { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Name
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the OwnerId of the action
         /// </summary>
         [JsonProperty(PropertyName = "ownerId")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the count of items that are included
         /// </summary>
         [JsonProperty(PropertyName = "itemCount")]
         public long? ItemCount { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Type of the Card.
-        /// Please use ContentTypes for this property although we don't use a
-        /// strong name for easier backward compatibilty for future extension.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Clickable Url of the Card
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets Locale of the Card (optional) for extra information
-        /// purpose.
+        /// </summary>
+        [JsonProperty(PropertyName = "sourceHref")]
+        public string SourceHref { get; set; }
+
+        /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "locale")]
         public string Locale { get; set; }
 
         /// <summary>
-        /// Gets or sets AdaptiveCard of the Card (optional) for adaptive card
-        /// rendering purpose.
         /// </summary>
         [JsonProperty(PropertyName = "adaptiveCard")]
         public string AdaptiveCard { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the CreateDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "createdDateTime")]
         public string CreatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the ModifiedDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "updatedDateTime")]
         public string UpdatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set whether the entity is Deleted
         /// </summary>
         [JsonProperty(PropertyName = "deleted")]
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the extended type
         /// </summary>
         [JsonProperty(PropertyName = "_et")]
         public string _et { get; set; }

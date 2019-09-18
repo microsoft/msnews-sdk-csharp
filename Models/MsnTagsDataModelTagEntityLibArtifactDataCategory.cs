@@ -28,12 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataCategory class.
         /// </summary>
-        /// <param name="product">Gets or sets Product</param>
-        /// <param name="label">Gets or sets Label</param>
-        /// <param name="source">Gets or sets Source</param>
-        /// <param name="score">Gets or sets Score</param>
-        /// <param name="displayText">Gets or sets DisplayText</param>
-        /// <param name="urlSegment">Gets or sets UrlSegment</param>
         public MsnTagsDataModelTagEntityLibArtifactDataCategory(string product = default(string), string label = default(string), string source = default(string), double? score = default(double?), string displayText = default(string), string urlSegment = default(string))
         {
             Product = product;
@@ -51,37 +45,31 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Product
         /// </summary>
         [JsonProperty(PropertyName = "product")]
         public string Product { get; set; }
 
         /// <summary>
-        /// Gets or sets Label
         /// </summary>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
 
         /// <summary>
-        /// Gets or sets Source
         /// </summary>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
 
         /// <summary>
-        /// Gets or sets Score
         /// </summary>
         [JsonProperty(PropertyName = "score")]
         public double? Score { get; set; }
 
         /// <summary>
-        /// Gets or sets DisplayText
         /// </summary>
         [JsonProperty(PropertyName = "displayText")]
         public string DisplayText { get; set; }
 
         /// <summary>
-        /// Gets or sets UrlSegment
         /// </summary>
         [JsonProperty(PropertyName = "urlSegment")]
         public string UrlSegment { get; set; }

@@ -39,46 +39,6 @@ namespace MicrosoftNewsAPI.SDK
 
 
         /// <summary>
-        /// Get available interests.
-        /// </summary>
-        /// <param name='apikey'>
-        /// Security parameter : apikey
-        /// </param>
-        /// <param name='ocid'>
-        /// Security parameter : ocid
-        /// </param>
-        /// <param name='market'>
-        /// The market.
-        /// </param>
-        /// <param name='user'>
-        /// The user ID of who is making the request, needs to be
-        /// authenticated.
-        /// </param>
-        /// <param name='activityId'>
-        /// Use this parameter for if you need to relate your request
-        /// activities with Microsoft News API performance monitoring
-        /// </param>
-        /// <param name='top'>
-        /// Total number of documents required - (default is 10)
-        /// </param>
-        /// <param name='select'>
-        /// Comma separated fields, for attribute projection purpose
-        /// </param>
-        /// <param name='ids'>
-        /// Get related entities via their ids.
-        /// </param>
-        /// <param name='skip'>
-        /// Number of documents to be skipped from the top.
-        /// </param>
-        /// <param name='customHeaders'>
-        /// The headers that will be added to request.
-        /// </param>
-        /// <param name='cancellationToken'>
-        /// The cancellation token.
-        /// </param>
-        Task<HttpOperationResponse<object>> GetNewsTopicsWithHttpMessagesAsync(string apikey, string ocid, string market = default(string), string user = default(string), string activityId = default(string), int? top = default(int?), string select = default(string), string ids = default(string), int? skip = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// The Feed API is a one stop shop for getting content for any
         /// category (ie. autos, sports), search term (ie. Microsoft), or theme
         /// (trending feed, related feed).
@@ -169,6 +129,46 @@ namespace MicrosoftNewsAPI.SDK
         /// The cancellation token.
         /// </param>
         Task<HttpOperationResponse<object>> GetNewsMarketsWithHttpMessagesAsync(string apikey, string ocid, string filter = default(string), string activityId = default(string), int? top = default(int?), string select = default(string), string ids = default(string), int? skip = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get available interests.
+        /// </summary>
+        /// <param name='apikey'>
+        /// Security parameter : apikey
+        /// </param>
+        /// <param name='ocid'>
+        /// Security parameter : ocid
+        /// </param>
+        /// <param name='market'>
+        /// The market.
+        /// </param>
+        /// <param name='user'>
+        /// The user ID of who is making the request, needs to be
+        /// authenticated.
+        /// </param>
+        /// <param name='activityId'>
+        /// Use this parameter for if you need to relate your request
+        /// activities with Microsoft News API performance monitoring
+        /// </param>
+        /// <param name='top'>
+        /// Total number of documents required - (default is 10)
+        /// </param>
+        /// <param name='select'>
+        /// Comma separated fields, for attribute projection purpose
+        /// </param>
+        /// <param name='ids'>
+        /// Get related entities via their ids.
+        /// </param>
+        /// <param name='skip'>
+        /// Number of documents to be skipped from the top.
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse<object>> GetNewsTopicsWithHttpMessagesAsync(string apikey, string ocid, string market = default(string), string user = default(string), string activityId = default(string), int? top = default(int?), string select = default(string), string ids = default(string), int? skip = default(int?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
     }
 }

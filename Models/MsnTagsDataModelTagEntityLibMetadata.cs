@@ -28,8 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibMetadata class.
         /// </summary>
-        /// <param name="source">Gets or sets the source of the
-        /// metadata.</param>
         public MsnTagsDataModelTagEntityLibMetadata(string source = default(string))
         {
             Source = source;
@@ -42,7 +40,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the source of the metadata.
         /// </summary>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }

@@ -30,31 +30,7 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibCompositeCard class.
         /// </summary>
-        /// <param name="nextPageUrl">Get or set the Fetchable NextPageUrl of
-        /// the Card Content</param>
-        /// <param name="metadata">Get or set the dictionary of
-        /// Metadata.</param>
-        /// <param name="section">An semantic section name of Composite cards,
-        /// it can be used as hint of UI configuration</param>
-        /// <param name="title">Get or set the EntityName of the
-        /// Actionable</param>
-        /// <param name="type">Get or set the Type of the Card.
-        /// Please use ContentTypes for this property although we don't use a
-        /// strong name for easier backward compatibilty for future
-        /// extension.</param>
-        /// <param name="url">Get or set the Clickable Url of the Card</param>
-        /// <param name="locale">Gets or sets Locale of the Card (optional) for
-        /// extra information purpose.</param>
-        /// <param name="adaptiveCard">Gets or sets AdaptiveCard of the Card
-        /// (optional) for adaptive card rendering purpose.</param>
-        /// <param name="createdDateTime">Get or set the CreateDate of the
-        /// entity</param>
-        /// <param name="updatedDateTime">Get or set the ModifiedDate of the
-        /// entity</param>
-        /// <param name="deleted">Get or set whether the entity is
-        /// Deleted</param>
-        /// <param name="_et">Get or set the extended type</param>
-        public MsnTagsDataModelTagEntityLibCompositeCard(string nextPageUrl = default(string), IList<object> subCards = default(IList<object>), IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>> metadata = default(IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>>), string section = default(string), string title = default(string), string type = default(string), string url = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
+        public MsnTagsDataModelTagEntityLibCompositeCard(string nextPageUrl = default(string), IList<object> subCards = default(IList<object>), IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>> metadata = default(IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>>), string section = default(string), string title = default(string), string type = default(string), string url = default(string), string sourceHref = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
         {
             NextPageUrl = nextPageUrl;
             SubCards = subCards;
@@ -63,6 +39,7 @@ namespace MicrosoftNewsAPI.SDK.Models
             Title = title;
             Type = type;
             Url = url;
+            SourceHref = sourceHref;
             Locale = locale;
             AdaptiveCard = adaptiveCard;
             CreatedDateTime = createdDateTime;
@@ -80,8 +57,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets get or set the Fetchable NextPageUrl of the Card
-        /// Content
         /// </summary>
         [JsonProperty(PropertyName = "nextPageUrl")]
         public string NextPageUrl { get; set; }
@@ -92,72 +67,61 @@ namespace MicrosoftNewsAPI.SDK.Models
         public IList<object> SubCards { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the dictionary of Metadata.
         /// </summary>
         [JsonProperty(PropertyName = "metadata")]
         public IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>> Metadata { get; set; }
 
         /// <summary>
-        /// Gets or sets an semantic section name of Composite cards, it can be
-        /// used as hint of UI configuration
         /// </summary>
         [JsonProperty(PropertyName = "section")]
         public string Section { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the EntityName of the Actionable
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Type of the Card.
-        /// Please use ContentTypes for this property although we don't use a
-        /// strong name for easier backward compatibilty for future extension.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Clickable Url of the Card
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets Locale of the Card (optional) for extra information
-        /// purpose.
+        /// </summary>
+        [JsonProperty(PropertyName = "sourceHref")]
+        public string SourceHref { get; set; }
+
+        /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "locale")]
         public string Locale { get; set; }
 
         /// <summary>
-        /// Gets or sets AdaptiveCard of the Card (optional) for adaptive card
-        /// rendering purpose.
         /// </summary>
         [JsonProperty(PropertyName = "adaptiveCard")]
         public string AdaptiveCard { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the CreateDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "createdDateTime")]
         public string CreatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the ModifiedDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "updatedDateTime")]
         public string UpdatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set whether the entity is Deleted
         /// </summary>
         [JsonProperty(PropertyName = "deleted")]
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the extended type
         /// </summary>
         [JsonProperty(PropertyName = "_et")]
         public string _et { get; set; }

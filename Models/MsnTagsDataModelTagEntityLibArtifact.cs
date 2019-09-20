@@ -30,51 +30,7 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifact class.
         /// </summary>
-        /// <param name="source">Get or set the Source of the Artifact</param>
-        /// <param name="sourceId">Get or set the SourceId of the
-        /// Artifact</param>
-        /// <param name="cmsId">Gets the CmsId of the Artifact.</param>
-        /// <param name="publishedDateTime">Get or set the PublishDate of the
-        /// entity</param>
-        /// <param name="images">Gets or sets Images.</param>
-        /// <param name="abstractProperty">Gets or sets Abstract.</param>
-        /// <param name="headlines">Gets or sets Headlines.</param>
-        /// <param name="tagEvaluationGroups">Gets or sets
-        /// TagEvaluationGroups.</param>
-        /// <param name="tags">Gets or sets Tags.</param>
-        /// <param name="algoTags">Gets or sets AlgoTags.</param>
-        /// <param name="categories">Gets or sets Categories.</param>
-        /// <param name="externalVideoFiles">Gets or sets
-        /// ExternalVideoFiles.</param>
-        /// <param name="sourceHref">Gets or sets the source HREF.</param>
-        /// <param name="hasSyndicationRights">Gets or sets
-        /// HasSyndicationRights.</param>
-        /// <param name="isBreaking">Gets or sets IsBreaking.</param>
-        /// <param name="galleryItemCount">Gets or sets the gallery item
-        /// count.</param>
-        /// <param name="isEmbedOnly">Gets or sets a value indicating whether
-        /// the content document should be treated as an embed only.
-        /// By default content is considered as standalone content (isEmbedOnly
-        /// is false).</param>
-        /// <param name="title">Get or set the EntityName of the
-        /// Actionable</param>
-        /// <param name="type">Get or set the Type of the Card.
-        /// Please use ContentTypes for this property although we don't use a
-        /// strong name for easier backward compatibilty for future
-        /// extension.</param>
-        /// <param name="url">Get or set the Clickable Url of the Card</param>
-        /// <param name="locale">Gets or sets Locale of the Card (optional) for
-        /// extra information purpose.</param>
-        /// <param name="adaptiveCard">Gets or sets AdaptiveCard of the Card
-        /// (optional) for adaptive card rendering purpose.</param>
-        /// <param name="createdDateTime">Get or set the CreateDate of the
-        /// entity</param>
-        /// <param name="updatedDateTime">Get or set the ModifiedDate of the
-        /// entity</param>
-        /// <param name="deleted">Get or set whether the entity is
-        /// Deleted</param>
-        /// <param name="_et">Get or set the extended type</param>
-        public MsnTagsDataModelTagEntityLibArtifact(string source = default(string), string sourceId = default(string), string cmsId = default(string), string publishedDateTime = default(string), MsnTagsDataModelTagEntityLibArtifactDataProviderSummary provider = default(MsnTagsDataModelTagEntityLibArtifactDataProviderSummary), IList<MsnTagsDataModelTagEntityLibArtifactDataImage> images = default(IList<MsnTagsDataModelTagEntityLibArtifactDataImage>), string abstractProperty = default(string), IList<MsnTagsDataModelTagEntityLibArtifactDataHeadline> headlines = default(IList<MsnTagsDataModelTagEntityLibArtifactDataHeadline>), IList<MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup> tagEvaluationGroups = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup>), IList<MsnTagsDataModelTagEntityLibArtifactDataTag> tags = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTag>), IList<MsnTagsDataModelTagEntityLibArtifactDataTag> algoTags = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTag>), IList<MsnTagsDataModelTagEntityLibArtifactDataCategory> categories = default(IList<MsnTagsDataModelTagEntityLibArtifactDataCategory>), IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> externalVideoFiles = default(IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile>), MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata videoMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata), MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata audioMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata), string sourceHref = default(string), bool? hasSyndicationRights = default(bool?), bool? isBreaking = default(bool?), int? galleryItemCount = default(int?), bool? isEmbedOnly = default(bool?), string title = default(string), string type = default(string), string url = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
+        public MsnTagsDataModelTagEntityLibArtifact(string source = default(string), string sourceId = default(string), string cmsId = default(string), string publishedDateTime = default(string), MsnTagsDataModelTagEntityLibArtifactDataProviderSummary provider = default(MsnTagsDataModelTagEntityLibArtifactDataProviderSummary), IList<MsnTagsDataModelTagEntityLibArtifactDataImage> images = default(IList<MsnTagsDataModelTagEntityLibArtifactDataImage>), string abstractProperty = default(string), IList<MsnTagsDataModelTagEntityLibArtifactDataHeadline> headlines = default(IList<MsnTagsDataModelTagEntityLibArtifactDataHeadline>), IList<MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup> tagEvaluationGroups = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup>), IList<MsnTagsDataModelTagEntityLibArtifactDataTag> tags = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTag>), IList<MsnTagsDataModelTagEntityLibArtifactDataTag> algoTags = default(IList<MsnTagsDataModelTagEntityLibArtifactDataTag>), IList<MsnTagsDataModelTagEntityLibArtifactDataCategory> categories = default(IList<MsnTagsDataModelTagEntityLibArtifactDataCategory>), IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> externalVideoFiles = default(IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile>), MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata videoMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata), MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata audioMetadata = default(MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata), bool? hasSyndicationRights = default(bool?), bool? isBreaking = default(bool?), int? galleryItemCount = default(int?), bool? isEmbedOnly = default(bool?), string title = default(string), string type = default(string), string url = default(string), string sourceHref = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
         {
             Source = source;
             SourceId = sourceId;
@@ -91,7 +47,6 @@ namespace MicrosoftNewsAPI.SDK.Models
             ExternalVideoFiles = externalVideoFiles;
             VideoMetadata = videoMetadata;
             AudioMetadata = audioMetadata;
-            SourceHref = sourceHref;
             HasSyndicationRights = hasSyndicationRights;
             IsBreaking = isBreaking;
             GalleryItemCount = galleryItemCount;
@@ -99,6 +54,7 @@ namespace MicrosoftNewsAPI.SDK.Models
             Title = title;
             Type = type;
             Url = url;
+            SourceHref = sourceHref;
             Locale = locale;
             AdaptiveCard = adaptiveCard;
             CreatedDateTime = createdDateTime;
@@ -116,25 +72,21 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets get or set the Source of the Artifact
         /// </summary>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the SourceId of the Artifact
         /// </summary>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// Gets the CmsId of the Artifact.
         /// </summary>
         [JsonProperty(PropertyName = "cmsId")]
         public string CmsId { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the PublishDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "publishedDateTime")]
         public string PublishedDateTime { get; set; }
@@ -145,49 +97,41 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MsnTagsDataModelTagEntityLibArtifactDataProviderSummary Provider { get; set; }
 
         /// <summary>
-        /// Gets or sets Images.
         /// </summary>
         [JsonProperty(PropertyName = "images")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataImage> Images { get; set; }
 
         /// <summary>
-        /// Gets or sets Abstract.
         /// </summary>
         [JsonProperty(PropertyName = "abstract")]
         public string AbstractProperty { get; set; }
 
         /// <summary>
-        /// Gets or sets Headlines.
         /// </summary>
         [JsonProperty(PropertyName = "headlines")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataHeadline> Headlines { get; set; }
 
         /// <summary>
-        /// Gets or sets TagEvaluationGroups.
         /// </summary>
         [JsonProperty(PropertyName = "tagEvaluationGroups")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup> TagEvaluationGroups { get; set; }
 
         /// <summary>
-        /// Gets or sets Tags.
         /// </summary>
         [JsonProperty(PropertyName = "tags")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataTag> Tags { get; set; }
 
         /// <summary>
-        /// Gets or sets AlgoTags.
         /// </summary>
         [JsonProperty(PropertyName = "algoTags")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataTag> AlgoTags { get; set; }
 
         /// <summary>
-        /// Gets or sets Categories.
         /// </summary>
         [JsonProperty(PropertyName = "categories")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataCategory> Categories { get; set; }
 
         /// <summary>
-        /// Gets or sets ExternalVideoFiles.
         /// </summary>
         [JsonProperty(PropertyName = "externalVideoFiles")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> ExternalVideoFiles { get; set; }
@@ -203,92 +147,71 @@ namespace MicrosoftNewsAPI.SDK.Models
         public MsnTagsDataModelTagEntityLibArtifactDataAudioMetadata AudioMetadata { get; set; }
 
         /// <summary>
-        /// Gets or sets the source HREF.
-        /// </summary>
-        [JsonProperty(PropertyName = "sourceHref")]
-        public string SourceHref { get; set; }
-
-        /// <summary>
-        /// Gets or sets HasSyndicationRights.
         /// </summary>
         [JsonProperty(PropertyName = "hasSyndicationRights")]
         public bool? HasSyndicationRights { get; set; }
 
         /// <summary>
-        /// Gets or sets IsBreaking.
         /// </summary>
         [JsonProperty(PropertyName = "isBreaking")]
         public bool? IsBreaking { get; set; }
 
         /// <summary>
-        /// Gets or sets the gallery item count.
         /// </summary>
         [JsonProperty(PropertyName = "galleryItemCount")]
         public int? GalleryItemCount { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the content document should
-        /// be treated as an embed only.
-        /// By default content is considered as standalone content (isEmbedOnly
-        /// is false).
         /// </summary>
         [JsonProperty(PropertyName = "isEmbedOnly")]
         public bool? IsEmbedOnly { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the EntityName of the Actionable
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Type of the Card.
-        /// Please use ContentTypes for this property although we don't use a
-        /// strong name for easier backward compatibilty for future extension.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the Clickable Url of the Card
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets Locale of the Card (optional) for extra information
-        /// purpose.
+        /// </summary>
+        [JsonProperty(PropertyName = "sourceHref")]
+        public string SourceHref { get; set; }
+
+        /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "locale")]
         public string Locale { get; set; }
 
         /// <summary>
-        /// Gets or sets AdaptiveCard of the Card (optional) for adaptive card
-        /// rendering purpose.
         /// </summary>
         [JsonProperty(PropertyName = "adaptiveCard")]
         public string AdaptiveCard { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the CreateDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "createdDateTime")]
         public string CreatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the ModifiedDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "updatedDateTime")]
         public string UpdatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set whether the entity is Deleted
         /// </summary>
         [JsonProperty(PropertyName = "deleted")]
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the extended type
         /// </summary>
         [JsonProperty(PropertyName = "_et")]
         public string _et { get; set; }

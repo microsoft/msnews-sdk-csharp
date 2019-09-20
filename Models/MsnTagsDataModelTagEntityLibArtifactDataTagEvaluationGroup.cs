@@ -28,8 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup class.
         /// </summary>
-        /// <param name="vector">Gets or sets Vector</param>
-        /// <param name="source">Gets or sets Source</param>
         public MsnTagsDataModelTagEntityLibArtifactDataTagEvaluationGroup(string vector = default(string), string source = default(string))
         {
             Vector = vector;
@@ -43,13 +41,11 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Vector
         /// </summary>
         [JsonProperty(PropertyName = "vector")]
         public string Vector { get; set; }
 
         /// <summary>
-        /// Gets or sets Source
         /// </summary>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }

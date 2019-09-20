@@ -4,6 +4,7 @@
 
 using System;
 using MicrosoftNewsAPI.SDK;
+using MicrosoftNewsAPI.SDK.Models;
 
 namespace Examples
 {
@@ -18,24 +19,15 @@ namespace Examples
                 client = new MicrosoftNewsClient("YOUR_APIKEY", "YOUR_OCID");
             
 
-            
-            Console.WriteLine("Endpoint /news/topics");
-            var responseGetNewsTopics = client.GetNewsTopics();
-            if (responseGetNewsTopics != null) {
-                for (int i = 0; i < responseGetNewsTopics.Value.Count; i++) {
-                    Console.WriteLine(responseGetNewsTopics.Value[i]);
-                }
-            }
-            else {
-                Console.WriteLine("Invalid request or response from GetNewsTopics()");
-            }
-            
-            
             Console.WriteLine("Endpoint /news/feed");
             var responseGetNewsFeed = client.GetNewsFeed();
             if (responseGetNewsFeed != null) {
                 for (int i = 0; i < responseGetNewsFeed.Value.Count; i++) {
-                    Console.WriteLine(responseGetNewsFeed.Value[i]);
+                    Console.WriteLine("Number of subCards : " + responseGetNewsFeed.Value[i].SubCards.Count);
+                    foreach (var card in responseGetNewsFeed.Value[i].SubCards)
+                    {
+                        Console.WriteLine("(MicrosoftNewsApiContractsFeedItemViewV1) Title :" + card.Title);
+                    }
                 }
             }
             else {
@@ -47,11 +39,46 @@ namespace Examples
             var responseGetNewsMarkets = client.GetNewsMarkets();
             if (responseGetNewsMarkets != null) {
                 for (int i = 0; i < responseGetNewsMarkets.Value.Count; i++) {
-                    Console.WriteLine(responseGetNewsMarkets.Value[i]);
+                    Console.WriteLine("(MsnTagsDataModelTagEntityLibMarket) Culture :" + responseGetNewsMarkets.Value[i].Culture);
                 }
             }
             else {
                 Console.WriteLine("Invalid request or response from GetNewsMarkets()");
+            }
+            
+            
+            Console.WriteLine("Endpoint /news/topics");
+            var responseGetNewsTopics = client.GetNewsTopics();
+            if (responseGetNewsTopics != null) {
+                for (int i = 0; i < responseGetNewsTopics.Value.Count; i++) {
+                    Console.WriteLine("Number of subCards : " + responseGetNewsTopics.Value[i].SubCards.Count);
+                    foreach (var card in responseGetNewsTopics.Value[i].SubCards)
+                    {
+                        if (card is MsnTagsDataModelTagEntityLibArtifact)
+                        {
+                            var artifact = (MsnTagsDataModelTagEntityLibArtifact) card;
+                            Console.WriteLine("(MsnTagsDataModelTagEntityLibArtifact) Title : " + artifact.Title);
+                        
+                        }
+                        else if (card is MsnTagsDataModelTagEntityLibSysTag)
+                        {
+                            var sysTag = (MsnTagsDataModelTagEntityLibSysTag) card;
+                            Console.WriteLine("(MsnTagsDataModelTagEntityLibSysTag) Name : " + sysTag.Name);
+                        }
+                        else if (card is MsnTagsDataModelTagEntityLibCompositeCard)
+                        {
+                            var compositeCard = (MsnTagsDataModelTagEntityLibCompositeCard) card;
+                            Console.WriteLine("(MsnTagsDataModelTagEntityLibCompositeCard) Composite Card : " + compositeCard.Title);
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR!");
+                        }
+                    }
+                }
+            }
+            else {
+                Console.WriteLine("Invalid request or response from GetNewsTopics()");
             }
             
             

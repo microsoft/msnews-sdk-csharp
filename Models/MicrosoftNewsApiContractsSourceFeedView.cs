@@ -28,8 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MicrosoftNewsApiContractsSourceFeedView class.
         /// </summary>
-        /// <param name="id">The unique identifier for the Feed</param>
-        /// <param name="feedName">The name of the feed</param>
         public MicrosoftNewsApiContractsSourceFeedView(string id = default(string), string feedName = default(string))
         {
             Id = id;
@@ -43,13 +41,11 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the unique identifier for the Feed
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the name of the feed
         /// </summary>
         [JsonProperty(PropertyName = "feedName")]
         public string FeedName { get; set; }

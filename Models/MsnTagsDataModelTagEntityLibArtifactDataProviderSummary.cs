@@ -28,15 +28,13 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataProviderSummary class.
         /// </summary>
-        /// <param name="id">Gets or sets Id</param>
-        /// <param name="name">Gets or sets Name</param>
-        /// <param name="adNetworkId">Gets or sets AdNetworkId</param>
-        public MsnTagsDataModelTagEntityLibArtifactDataProviderSummary(string id = default(string), string name = default(string), string adNetworkId = default(string), MsnTagsDataModelTagEntityLibArtifactDataImage logo = default(MsnTagsDataModelTagEntityLibArtifactDataImage))
+        public MsnTagsDataModelTagEntityLibArtifactDataProviderSummary(string id = default(string), string name = default(string), string adNetworkId = default(string), MsnTagsDataModelTagEntityLibArtifactDataImage logo = default(MsnTagsDataModelTagEntityLibArtifactDataImage), string subscriptionUrl = default(string))
         {
             Id = id;
             Name = name;
             AdNetworkId = adNetworkId;
             Logo = logo;
+            SubscriptionUrl = subscriptionUrl;
             CustomInit();
         }
 
@@ -46,19 +44,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Id
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets Name
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets AdNetworkId
         /// </summary>
         [JsonProperty(PropertyName = "adNetworkId")]
         public string AdNetworkId { get; set; }
@@ -67,6 +62,11 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// </summary>
         [JsonProperty(PropertyName = "logo")]
         public MsnTagsDataModelTagEntityLibArtifactDataImage Logo { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "subscriptionUrl")]
+        public string SubscriptionUrl { get; set; }
 
     }
 }

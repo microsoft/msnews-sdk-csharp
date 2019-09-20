@@ -28,13 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibLocation class.
         /// </summary>
-        /// <param name="countryCode">Gets or sets the two characters country
-        /// ISO code like US, CA.</param>
-        /// <param name="subdivision">Gets or sets the subdivision.</param>
-        /// <param name="city">Gets or sets the city.</param>
-        /// <param name="latitude">Gets or sets the latitude.</param>
-        /// <param name="longitude">Gets or sets the longitude.</param>
-        /// <param name="radiusMeters">Gets or sets the radius meters.</param>
         public MsnTagsDataModelTagEntityLibLocation(string countryCode = default(string), string subdivision = default(string), string city = default(string), double? latitude = default(double?), double? longitude = default(double?), int? radiusMeters = default(int?))
         {
             CountryCode = countryCode;
@@ -52,37 +45,31 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the two characters country ISO code like US, CA.
         /// </summary>
         [JsonProperty(PropertyName = "countryCode")]
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the subdivision.
         /// </summary>
         [JsonProperty(PropertyName = "subdivision")]
         public string Subdivision { get; set; }
 
         /// <summary>
-        /// Gets or sets the city.
         /// </summary>
         [JsonProperty(PropertyName = "city")]
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or sets the latitude.
         /// </summary>
         [JsonProperty(PropertyName = "latitude")]
         public double? Latitude { get; set; }
 
         /// <summary>
-        /// Gets or sets the longitude.
         /// </summary>
         [JsonProperty(PropertyName = "longitude")]
         public double? Longitude { get; set; }
 
         /// <summary>
-        /// Gets or sets the radius meters.
         /// </summary>
         [JsonProperty(PropertyName = "radiusMeters")]
         public int? RadiusMeters { get; set; }

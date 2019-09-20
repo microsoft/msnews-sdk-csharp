@@ -28,10 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MicrosoftNewsApiContractsProviderSummaryView class.
         /// </summary>
-        /// <param name="id">The unique identifier of the Content Provider in
-        /// the Microsoft News graph.</param>
-        /// <param name="name">The display name for the provider</param>
-        /// <param name="logoUrl">The URL of the provider logo</param>
         public MicrosoftNewsApiContractsProviderSummaryView(string id = default(string), string name = default(string), string logoUrl = default(string))
         {
             Id = id;
@@ -46,20 +42,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the unique identifier of the Content Provider in the
-        /// Microsoft News graph.
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the display name for the provider
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the URL of the provider logo
         /// </summary>
         [JsonProperty(PropertyName = "logoUrl")]
         public string LogoUrl { get; set; }

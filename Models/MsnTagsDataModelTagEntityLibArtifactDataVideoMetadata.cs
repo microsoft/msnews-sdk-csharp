@@ -30,11 +30,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata class.
         /// </summary>
-        /// <param name="playTime">Gets or sets the play time.</param>
-        /// <param name="closedCaptions">Gets or sets the closed
-        /// captions.</param>
-        /// <param name="externalVideoFiles">Gets or sets the external video
-        /// files.</param>
         public MsnTagsDataModelTagEntityLibArtifactDataVideoMetadata(int? playTime = default(int?), IList<MsnTagsDataModelTagEntityLibArtifactDataCloseCaption> closedCaptions = default(IList<MsnTagsDataModelTagEntityLibArtifactDataCloseCaption>), IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> externalVideoFiles = default(IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile>))
         {
             PlayTime = playTime;
@@ -49,19 +44,16 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets the play time.
         /// </summary>
         [JsonProperty(PropertyName = "playTime")]
         public int? PlayTime { get; set; }
 
         /// <summary>
-        /// Gets or sets the closed captions.
         /// </summary>
         [JsonProperty(PropertyName = "closedCaptions")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataCloseCaption> ClosedCaptions { get; set; }
 
         /// <summary>
-        /// Gets or sets the external video files.
         /// </summary>
         [JsonProperty(PropertyName = "externalVideoFiles")]
         public IList<MsnTagsDataModelTagEntityLibArtifactDataExternalVideoFile> ExternalVideoFiles { get; set; }

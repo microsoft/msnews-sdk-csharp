@@ -28,10 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataFocalRegion class.
         /// </summary>
-        /// <param name="x1">Gets or sets X1</param>
-        /// <param name="x2">Gets or sets X2</param>
-        /// <param name="y1">Gets or sets Y1</param>
-        /// <param name="y2">Gets or sets Y2</param>
         public MsnTagsDataModelTagEntityLibArtifactDataFocalRegion(int? x1 = default(int?), int? x2 = default(int?), int? y1 = default(int?), int? y2 = default(int?))
         {
             X1 = x1;
@@ -47,25 +43,21 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets X1
         /// </summary>
         [JsonProperty(PropertyName = "x1")]
         public int? X1 { get; set; }
 
         /// <summary>
-        /// Gets or sets X2
         /// </summary>
         [JsonProperty(PropertyName = "x2")]
         public int? X2 { get; set; }
 
         /// <summary>
-        /// Gets or sets Y1
         /// </summary>
         [JsonProperty(PropertyName = "y1")]
         public int? Y1 { get; set; }
 
         /// <summary>
-        /// Gets or sets Y2
         /// </summary>
         [JsonProperty(PropertyName = "y2")]
         public int? Y2 { get; set; }

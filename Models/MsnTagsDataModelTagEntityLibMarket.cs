@@ -28,25 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibMarket class.
         /// </summary>
-        /// <param name="culture">Get or set the Culture of the market</param>
-        /// <param name="country">Get or set the country of the market</param>
-        /// <param name="language">Get or set the language of the
-        /// market</param>
-        /// <param name="countryCode">Get or set the country code of the
-        /// market</param>
-        /// <param name="languageCode">Get or set the language code of the
-        /// market</param>
-        /// <param name="isBingNewsAvailable">Get or set the boolean for is
-        /// bing news available of the market</param>
-        /// <param name="isMsnMarket">Get or set the boolean for is MSN market
-        /// for the market</param>
-        /// <param name="createdDateTime">Get or set the CreateDate of the
-        /// entity</param>
-        /// <param name="updatedDateTime">Get or set the ModifiedDate of the
-        /// entity</param>
-        /// <param name="deleted">Get or set whether the entity is
-        /// Deleted</param>
-        /// <param name="_et">Get or set the extended type</param>
         public MsnTagsDataModelTagEntityLibMarket(string culture = default(string), string country = default(string), string language = default(string), string countryCode = default(string), string languageCode = default(string), bool? isBingNewsAvailable = default(bool?), bool? isMsnMarket = default(bool?), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
         {
             Culture = culture;
@@ -71,69 +52,56 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets get or set the Culture of the market
         /// </summary>
         [JsonProperty(PropertyName = "culture")]
         public string Culture { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the country of the market
         /// </summary>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the language of the market
         /// </summary>
         [JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the country code of the market
         /// </summary>
         [JsonProperty(PropertyName = "countryCode")]
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the language code of the market
         /// </summary>
         [JsonProperty(PropertyName = "languageCode")]
         public string LanguageCode { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the boolean for is bing news available of
-        /// the market
         /// </summary>
         [JsonProperty(PropertyName = "isBingNewsAvailable")]
         public bool? IsBingNewsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the boolean for is MSN market for the
-        /// market
         /// </summary>
         [JsonProperty(PropertyName = "isMsnMarket")]
         public bool? IsMsnMarket { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the CreateDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "createdDateTime")]
         public string CreatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the ModifiedDate of the entity
         /// </summary>
         [JsonProperty(PropertyName = "updatedDateTime")]
         public string UpdatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set whether the entity is Deleted
         /// </summary>
         [JsonProperty(PropertyName = "deleted")]
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// Gets or sets get or set the extended type
         /// </summary>
         [JsonProperty(PropertyName = "_et")]
         public string _et { get; set; }

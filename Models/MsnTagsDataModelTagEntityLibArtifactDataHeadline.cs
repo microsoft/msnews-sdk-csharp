@@ -28,10 +28,6 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibArtifactDataHeadline class.
         /// </summary>
-        /// <param name="title">Gets or sets Title</param>
-        /// <param name="subTitle">Gets or sets the sub title.</param>
-        /// <param name="kicker">Gets or sets the kicker.</param>
-        /// <param name="imageCaption">Gets or sets ImageCaption</param>
         public MsnTagsDataModelTagEntityLibArtifactDataHeadline(string title = default(string), string subTitle = default(string), string kicker = default(string), string imageCaption = default(string), MsnTagsDataModelTagEntityLibArtifactDataImage image = default(MsnTagsDataModelTagEntityLibArtifactDataImage))
         {
             Title = title;
@@ -48,25 +44,21 @@ namespace MicrosoftNewsAPI.SDK.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets Title
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the sub title.
         /// </summary>
         [JsonProperty(PropertyName = "subTitle")]
         public string SubTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets the kicker.
         /// </summary>
         [JsonProperty(PropertyName = "kicker")]
         public string Kicker { get; set; }
 
         /// <summary>
-        /// Gets or sets ImageCaption
         /// </summary>
         [JsonProperty(PropertyName = "imageCaption")]
         public string ImageCaption { get; set; }

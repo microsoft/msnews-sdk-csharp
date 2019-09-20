@@ -16,15 +16,13 @@ git clone https://github.com/microsoft/msnews-sdk-csharp
 ```
 ### 2. Open solution
 Open **MSN.Library.MicrosoftNewsAPI.SDK.Csharp.sln** solution in Visual Studio
-### 3. Install dependencies
-Open **Nuget Manager** and install **Microsoft.Rest.ClientRuntime, Microsoft.NETCore.App, Newtonsoft.Json** packages
-### 4. Set your credentials
+### 3. Set your credentials
 Set your credentials ( **APIKEY** and **OCID**) at **MicrosoftNewsClient** constructor.
 Sample usage as follows,
 ```csharp
 MicrosoftNewsClient client  = new MicrosoftNewsClient("YOUR_APIKEY", "YOUR_OCID");
 ```
-### 5. Sample API calls
+### 4. Sample API calls
 You check **Program.cs** file located under **Examples** project to further usage of SDK
 ```csharp
 using System;
@@ -109,3 +107,6 @@ the [Security TechCenter](https://technet.microsoft.com/en-us/security/default).
 
 ## License
 Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the MIT [license](License.txt). See [Third Party Notices](THIRD_PARTY_NOTICES) for information on the packages referenced via NuGet.
+
+## Dependencies
+**Microsoft.Rest.ClientRuntime** (SDK Project), **Newtonsoft.Json** (SDK Project), **Microsoft.NETCore.App** (Sample Project)  

@@ -1,5 +1,6 @@
 # Microsoft News API SDK for C#
 Integrate the Microsoft News API into your .NET project!
+To obtain your api key and ocid, you can send us an [e-mail](mailto:msftnewsapi@microsoft.com)!
 
 ## Give us your feedback
 Your feedback is important to us.
@@ -25,8 +26,10 @@ MicrosoftNewsClient client  = new MicrosoftNewsClient("YOUR_APIKEY", "YOUR_OCID"
 ### 4. Sample API calls
 You check **Program.cs** file located under **Examples** project to further usage of SDK
 ```csharp
+
 using System;
 using MicrosoftNewsAPI.SDK;
+using MicrosoftNewsAPI.SDK.Models;
 
 namespace Examples
 {
@@ -34,31 +37,76 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-            // Connection client
             MicrosoftNewsClient client;
             if (args.Length == 2)
                 client = new MicrosoftNewsClient(args[0], args[1]);
             else
                 client = new MicrosoftNewsClient("YOUR_APIKEY", "YOUR_OCID");
+            
 
-            // Sample API calls
-            Console.WriteLine("Endpoint /News/Feed");
-            var responseGetNewsFeed = client.GetNewsFeed(query:"sports",nextPageCount:20);
-            for (int i = 0; i < responseGetNewsFeed.Value.Count; i++) {
-                Console.WriteLine(responseGetNewsFeed.Value[i].SubCards.Count);
+            Console.WriteLine("Endpoint /news/feed");
+            var responseGetNewsFeed = client.GetNewsFeed();
+            if (responseGetNewsFeed != null) {
+                for (int i = 0; i < responseGetNewsFeed.Value.Count; i++) {
+                    Console.WriteLine("Number of subCards : " + responseGetNewsFeed.Value[i].SubCards.Count);
+                    foreach (var card in responseGetNewsFeed.Value[i].SubCards)
+                    {
+                        Console.WriteLine("(MicrosoftNewsApiContractsFeedItemViewV1) Title :" + card.Title);
+                    }
+                }
             }
-
-            Console.WriteLine("Endpoint /News/Markets");
+            else {
+                Console.WriteLine("Invalid request or response from GetNewsFeed()");
+            }
+            
+            
+            Console.WriteLine("Endpoint /news/markets");
             var responseGetNewsMarkets = client.GetNewsMarkets();
-            for (int i = 0; i < responseGetNewsMarkets.Value.Count; i++) {
-                Console.WriteLine(responseGetNewsMarkets.Value[i].Id);
+            if (responseGetNewsMarkets != null) {
+                for (int i = 0; i < responseGetNewsMarkets.Value.Count; i++) {
+                    Console.WriteLine("(MsnTagsDataModelTagEntityLibMarket) Culture :" + responseGetNewsMarkets.Value[i].Culture);
+                }
             }
-
-            Console.WriteLine("Endpoint /News/Topics");
+            else {
+                Console.WriteLine("Invalid request or response from GetNewsMarkets()");
+            }
+            
+            
+            Console.WriteLine("Endpoint /news/topics");
             var responseGetNewsTopics = client.GetNewsTopics();
-            for (int i = 0; i < responseGetNewsTopics.Value.Count; i++) {
-                Console.WriteLine(responseGetNewsTopics.Value[i].SubCards.Count);
+            if (responseGetNewsTopics != null) {
+                for (int i = 0; i < responseGetNewsTopics.Value.Count; i++) {
+                    Console.WriteLine("Number of subCards : " + responseGetNewsTopics.Value[i].SubCards.Count);
+                    foreach (var card in responseGetNewsTopics.Value[i].SubCards)
+                    {
+                        if (card is MsnTagsDataModelTagEntityLibArtifact)
+                        {
+                            var artifact = (MsnTagsDataModelTagEntityLibArtifact) card;
+                            Console.WriteLine("(MsnTagsDataModelTagEntityLibArtifact) Title : " + artifact.Title);
+                        
+                        }
+                        else if (card is MsnTagsDataModelTagEntityLibSysTag)
+                        {
+                            var sysTag = (MsnTagsDataModelTagEntityLibSysTag) card;
+                            Console.WriteLine("(MsnTagsDataModelTagEntityLibSysTag) Name : " + sysTag.Name);
+                        }
+                        else if (card is MsnTagsDataModelTagEntityLibCompositeCard)
+                        {
+                            var compositeCard = (MsnTagsDataModelTagEntityLibCompositeCard) card;
+                            Console.WriteLine("(MsnTagsDataModelTagEntityLibCompositeCard) Composite Card : " + compositeCard.Title);
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR!");
+                        }
+                    }
+                }
             }
+            else {
+                Console.WriteLine("Invalid request or response from GetNewsTopics()");
+            }
+            
+            
         }
     }
 }
@@ -66,21 +114,41 @@ namespace Examples
 ```
 Expected Output
 ```bash
-Endpoint /News/Feed
-10
-Endpoint /News/Markets
-M_hi_in
-M_es_xl
-M_es_mx
-M_en_au
-M_pt_br
-M_es_ar
-M_es_co
-M_en_in
-M_fr_be
-M_pt_pt
-Endpoint /News/Topics
-10
+Endpoint /news/feed
+Number of subCards : 10
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Trump questions patriotism of whistleblower in firestorm
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Fashion hits and misses
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Best pictures from the 2019 Emmys
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Woman sexually assaulted by Brock Turner gives '60 Minutes' interview
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Ranking the 7 NFL teams with 3-0 records
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :5 TV shows and people who don't deserve their Emmy awards - sorry
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Kasich on Ukraine: 'People would be going crazy' if Obama did this
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Overstock plummets 19% as CFO resigns
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :Tekashi 69: Can he disappear after testifying against the Bloods?
+(MicrosoftNewsApiContractsFeedItemViewV1) Title :This company has filed 10,000 appeals to Trump's tariffs
+Endpoint /news/markets
+(MsnTagsDataModelTagEntityLibMarket) Culture :hi-in
+(MsnTagsDataModelTagEntityLibMarket) Culture :es-xl
+(MsnTagsDataModelTagEntityLibMarket) Culture :es-mx
+(MsnTagsDataModelTagEntityLibMarket) Culture :en-au
+(MsnTagsDataModelTagEntityLibMarket) Culture :pt-br
+(MsnTagsDataModelTagEntityLibMarket) Culture :es-ar
+(MsnTagsDataModelTagEntityLibMarket) Culture :es-co
+(MsnTagsDataModelTagEntityLibMarket) Culture :en-in
+(MsnTagsDataModelTagEntityLibMarket) Culture :fr-be
+(MsnTagsDataModelTagEntityLibMarket) Culture :pt-pt
+Endpoint /news/topics
+Number of subCards : 10
+(MsnTagsDataModelTagEntityLibSysTag) Name : outlook-uwp
+(MsnTagsDataModelTagEntityLibSysTag) Name : Royals
+(MsnTagsDataModelTagEntityLibSysTag) Name : Milwaukee
+(MsnTagsDataModelTagEntityLibSysTag) Name : Oklahoma City
+(MsnTagsDataModelTagEntityLibSysTag) Name : San Antonio
+(MsnTagsDataModelTagEntityLibSysTag) Name : Los Angeles
+(MsnTagsDataModelTagEntityLibSysTag) Name : Portland, ME
+(MsnTagsDataModelTagEntityLibSysTag) Name : Cleveland
+(MsnTagsDataModelTagEntityLibSysTag) Name : New Orleans
+(MsnTagsDataModelTagEntityLibSysTag) Name : Baltimore
 ```
 
 ## Contributing

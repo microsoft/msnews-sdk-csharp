@@ -1,6 +1,7 @@
 # Microsoft News API SDK for C#
 Integrate the Microsoft News API into your .NET project!
 To obtain your api key and ocid, you can send us an [e-mail](mailto:msftnewsapi@microsoft.com)!
+[![Build status](https://microsoft.visualstudio.com/Universal%20Store/_apis/build/status/%5B5%5D%20%5BGitHub%5D%20%5BCI%5D%20Microsoft%20News%20SDK%20GitHub%20CI)](https://microsoft.visualstudio.com/Universal%20Store/_build/latest?definitionId=44416)
 
 ## Give us your feedback
 Your feedback is important to us.

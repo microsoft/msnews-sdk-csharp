@@ -18,7 +18,6 @@ namespace Examples
             else
                 client = new MicrosoftNewsClient("YOUR_APIKEY", "YOUR_OCID");
             
-
             Console.WriteLine("Endpoint /news/feed");
             var responseGetNewsFeed = client.GetNewsFeed();
             if (responseGetNewsFeed != null) {
@@ -34,7 +33,6 @@ namespace Examples
                 Console.WriteLine("Invalid request or response from GetNewsFeed()");
             }
             
-            
             Console.WriteLine("Endpoint /news/markets");
             var responseGetNewsMarkets = client.GetNewsMarkets();
             if (responseGetNewsMarkets != null) {
@@ -46,7 +44,6 @@ namespace Examples
                 Console.WriteLine("Invalid request or response from GetNewsMarkets()");
             }
             
-            
             Console.WriteLine("Endpoint /news/topics");
             var responseGetNewsTopics = client.GetNewsTopics();
             if (responseGetNewsTopics != null) {
@@ -54,35 +51,13 @@ namespace Examples
                     Console.WriteLine("Number of subCards : " + responseGetNewsTopics.Value[i].SubCards.Count);
                     foreach (var card in responseGetNewsTopics.Value[i].SubCards)
                     {
-                        if (card is MsnTagsDataModelTagEntityLibArtifact)
-                        {
-                            var artifact = (MsnTagsDataModelTagEntityLibArtifact) card;
-                            Console.WriteLine("(MsnTagsDataModelTagEntityLibArtifact) Title : " + artifact.Title);
-                        
-                        }
-                        else if (card is MsnTagsDataModelTagEntityLibSysTag)
-                        {
-                            var sysTag = (MsnTagsDataModelTagEntityLibSysTag) card;
-                            Console.WriteLine("(MsnTagsDataModelTagEntityLibSysTag) Name : " + sysTag.Name);
-                        }
-                        else if (card is MsnTagsDataModelTagEntityLibCompositeCard)
-                        {
-                            var compositeCard = (MsnTagsDataModelTagEntityLibCompositeCard) card;
-                            Console.WriteLine("(MsnTagsDataModelTagEntityLibCompositeCard) Composite Card : " + compositeCard.Title);
-                        }
-                        else
-                        {
-                            Console.WriteLine("ERROR!");
-                        }
+                       Console.WriteLine("(MsnTagsDataModelTagEntityLibCompositeCard) Composite Card : " + card.Title);
                     }
                 }
             }
             else {
                 Console.WriteLine("Invalid request or response from GetNewsTopics()");
             }
-            
-            
         }
     }
 }
-    

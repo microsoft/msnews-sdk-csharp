@@ -30,7 +30,7 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// Initializes a new instance of the
         /// MsnTagsDataModelTagEntityLibCompositeCard class.
         /// </summary>
-        public MsnTagsDataModelTagEntityLibCompositeCard(string nextPageUrl = default(string), IList<object> subCards = default(IList<object>), IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>> metadata = default(IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>>), string section = default(string), string title = default(string), string type = default(string), string url = default(string), string sourceHref = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
+        public MsnTagsDataModelTagEntityLibCompositeCard(string nextPageUrl = default(string), IList<MsnTagsDataModelTagEntityLibCompositeCard> subCards = default(IList<MsnTagsDataModelTagEntityLibCompositeCard>), IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>> metadata = default(IDictionary<string, IList<MsnTagsDataModelTagEntityLibMetadata>>), string section = default(string), string title = default(string), string type = default(string), string url = default(string), string sourceHref = default(string), string locale = default(string), string adaptiveCard = default(string), string createdDateTime = default(string), string updatedDateTime = default(string), bool? deleted = default(bool?), string _et = default(string), string id = default(string), string _t = default(string))
         {
             NextPageUrl = nextPageUrl;
             SubCards = subCards;
@@ -64,7 +64,7 @@ namespace MicrosoftNewsAPI.SDK.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "subCards")]
-        public IList<object> SubCards { get; set; }
+        public IList<MsnTagsDataModelTagEntityLibCompositeCard> SubCards { get; set; }
 
         /// <summary>
         /// </summary>
